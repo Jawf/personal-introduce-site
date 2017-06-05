@@ -92,11 +92,27 @@ jQuery(document).ready(function($){
     });
 
 // scroll wheel event
-
+/*
 document.body.onmousewheel = function (event) {
     event = event || window.event;
 
-    var direction = event.wheelDelta && (event.wheelDelta > 0 ? "mouseup" : "mousedown");
+    var direction = event.wheelDelta && (event.wheelDelta > 0 ? "up" : "down");
     console.log(direction);
-	alert(direction);
-};
+	//alert(direction+''+$("#work").innerHeight() +'|'+$(this).height());
+	var upflag=1;  
+	var  downflag= 1;  
+	if (direction == "down") {  
+           if (downflag) {  
+               $("#contact").slideUp(200);  
+               downflag = 0;  
+              upflag = 1;  
+           }  
+    }  
+    if (direction == "up") {
+           if (upflag) {  
+               $("#contact").slideDown(200);  
+              downflag = 1;  
+               upflag = 0;  
+           }  
+    }  
+};*/
